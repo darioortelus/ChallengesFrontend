@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patita’s</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+   <section>
+    <nav id="nav">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="assets/logo.svg" alt="Logo">
+                Patita’s
+            </span>
+        </div>
+        <div class="nav-search">
+            <a href="#">
+                <i class="fas fa-search "></i>
+            </a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="content-table">
+            <h1>Filter Dogs</h1>
+            <div class="content-filter">
+                <input type="text" name="search" id="searchInput" class="form-control" placeholder="Search by name or subraces">
+            </div>
+            <main id="table">
+                <table width="100%" class="table" id="myTable">
+                    <thead id="thead">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Sub-Breeds</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr><td colspan="3"><i>Loading...</i></td></tr>
+                    </tbody>
+                </table>
+                <div id="pagination-container">
+                    <button onclick="prevPage()">Back</button>
+                    <span id="page-info">Página 1 de 1</span>
+                    <button onclick="nextPage()">Next</button>
+                  </div>
+            </main>
+        </div>
+    </div>
+   </section> 
+</body>
+<script src="filter.js"></script>
+</script>
+</html>

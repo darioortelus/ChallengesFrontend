@@ -1,0 +1,282 @@
+/* Establecer la fuente predeterminada para todo el documento */
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Estilos generales para el cuerpo y HTML */
+html, body {
+  background: #FFE16E;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales para los enlaces */
+a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bolder;
+  align-items: center;
+  display: flex;
+  gap: 7px;
+  margin-left: 15px;
+  color: #000;
+}
+
+/* Estilos para la barra de navegación */
+#nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #fff;
+  box-shadow: -1px 4px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 4px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* Estilos para el logo y la barra de búsqueda en la navegación */
+.nav-logo, .nav-search {
+  display: flex;
+  margin: 15px;
+}
+
+/* Estilos para el logo en la barra de navegación */
+.nav-logo img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Estilos para el contenido principal */
+.content {
+  padding: 0 5%;
+}
+
+/* Estilos para el contenido de texto */
+.text-content > h1 {
+  width: 440px;
+  font-size: 38px;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 20px;
+  line-height: 55px;
+}
+
+/* Estilos para la sección de tarjetas */
+#cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  padding: 1em;
+
+  /* Estilos para cada tarjeta */
+  .card {
+    background-color: #fff;
+    border-radius: 1em;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    /* Estilos para la imagen de la tarjeta */
+    .card-image {
+      height: 320px;
+      width: 100%;
+    }
+
+    /* Estilos para el contenido de la tarjeta */
+    .card-content {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1em;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      transform: translateY(100%);
+      transition: .2s ease-in-out;
+      z-index: 1;
+
+      /* Estilos para el encabezado de la tarjeta */
+      .card-header {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 1em 0 0 0;
+        display: flex;
+        gap: 1em;
+        padding: 1em;
+        position: relative;
+        transform: translateY(-100%);
+        transition: .2s ease-in-out;
+
+        /* Estilos para la forma en el encabezado */
+        .forma {
+          bottom: 100%;
+          height: 80px;
+          position: absolute;
+          right: 0;
+          width: 80px;
+          z-index: 1;
+
+          /* Estilos para el relleno de la forma */
+          path {
+            fill: rgba(255, 255, 255, 0.8);
+            d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+          }
+        }
+
+        /* Estilos para el título de la tarjeta */
+        .card-title {
+          color: #1a1a1a;
+          font-size: 16px;
+          font-weight: 600;
+          margin: 0;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    /* Estilos para la descripción de la tarjeta */
+    .card-description {
+      color: #fff;
+      display: -webkit-box;
+      word-wrap: break-word;
+      text-transform: capitalize;
+      white-space: normal;
+      font-size: 12px;
+      line-height: 1.5em;
+      margin: 0;
+      overflow: hidden;
+      padding: 1em;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    /* Efecto de desplazamiento al pasar el ratón sobre la tarjeta */
+    &:hover {
+      .card-content {
+        cursor: pointer;
+        background-color: rgba(0,0,0,.8);
+        border-top-right-radius: 0;
+        transform: translateY(0);
+        transition: .2s ease-in-out;
+        .card-header {
+          background-color: transparent;
+          transform: translateY(0);
+          .card-title{
+            color: #fff;
+          }
+          .forma path {
+            fill: rgba(0,0,0,.8);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Estilos para la sección de tablas */
+.content-table {
+  overflow-x: auto;
+  background-color: #fff;
+  margin: 4em;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
+  /* Estilos para el campo de entrada */
+  input {
+    height: 40px;
+    font-size: 16px;
+    padding: 11px 15px;
+    border-radius: 4px;
+    border: 1px solid #CBD8E3;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  /* Estilos para la tabla */
+  .table {
+    width: 100%;
+    border-radius: 10px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow-x: auto;
+  }
+
+  /* Estilos para las celdas y encabezados de la tabla */
+  .table td, th {
+    padding: 10px 15px;
+    text-align: left;
+  }
+
+  /* Estilos para las celdas */
+  td {
+    min-width: 40px;
+    word-break: break-all;
+  }
+
+  /* Estilos para los encabezados de la tabla */
+  .table th {
+    cursor: pointer;
+    background-color: #8a8a8a;
+    color: #fafafa;
+    font-family: 'Open Sans',Sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  /* Estilos para las filas de la tabla */
+  tr {
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Estilos alternos para filas pares */
+  tr:nth-child(even) {
+    background-color: #eeeeee;
+  }
+
+  /* Estilos para indicar la dirección de orden en los encabezados */
+  thead th.asc::after {
+    content: ' ▲';
+  }
+  
+  thead th.desc::after {
+    content: ' ▼';
+  }
+}
+
+/* Estilos generales para la paginación */
+#pagination-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilos para los botones de paginación */
+button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Estilos para el texto de información de página */
+#page-info {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+/* Estilos para deshabilitar el botón cuando no es necesario */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilos para la sección de filtro */
+.content-filter {
+  margin-bottom: 2em;
+}
