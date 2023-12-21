@@ -24,4 +24,5 @@ El "Memory Game" es un juego de memoria interactivo en el que los jugadores debe
 
 Para ejecutar este proyecto descargar la carpeta Task 3 y luego ejecuta el archivo index.html
 
-![image](https://github.com/darioortelus/ChallengesFrontend/assets/58276509/4d809da0-11cc-4af2-9f37-59e8290f3e48)
+![image](https://github.com/darioortelus/ChallengesFrontend/assets/58276509/6ca93e95-41a5-4047-b097-42e399166ccd)
+
